@@ -1,0 +1,24 @@
+{
+"cSpellExt.enableDictionaries": ["german", "ukrainian"],
+"cSpell.enabledLanguageIds": ["markdown"],
+"cSpell.language": "en,de,uk",
+	  "languageserver": {
+    "bash": {
+      "command": "bash-language-server",
+      "args": ["start"],
+      "filetypes": ["sh"],
+      "ignoredRootPaths": ["~"]
+    }
+  },
+  "cSpell.userWords": [
+    "Neovim",
+    "kanban",
+    "neofetch"
+  ],
+  "pyright.inlayHints.variableTypes": false,
+  "pyright.inlayHints.functionReturnTypes": true,
+  "clangd.inlayHints.enable": false
+}
+
+
+
