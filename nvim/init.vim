@@ -43,7 +43,7 @@ nnoremap <leader>v <cmd>NERDTree<cr>
 :nnoremap <F5> :Dashboard<Enter>
 
 
-command RichPresenceUpd lua package.loaded.presence:update()
+command UpdateRPC lua package.loaded.presence:update()
 lua require('amongus')
 
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
