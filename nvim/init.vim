@@ -70,7 +70,7 @@ let g:presence_debounce_timeout    = 10
 let g:presence_enable_line_number  = 0
 let g:presence_blacklist           = []
 let g:presence_buttons             = 1
-let g:coc_global_extensions = ['coc-json', 'coc-clangd', 'coc-spell-checker']
+let g:coc_global_extensions = ['coc-json', 'coc-clangd', 'coc-spell-checker', 'coc-go']
 
 let g:startify_lists = [
         \ { 'type': 'files',     'header': ['   MRU']            },
