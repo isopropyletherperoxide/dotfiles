@@ -3,7 +3,7 @@ require('telescope').load_extension('media_files')
 require'nvim-treesitter.configs'.setup {
   highlight = {
     enable = true,
-    ensure_installed = {"c", "python", "cpp", "go"},
+    ensure_installed = {"c", "python", "cpp", "go", "haskell"},
     sync_install=true,
     -- Setting this to true will run `:h syntax` and tree-sitter at the same time.
     -- Set this to `true` if you depend on 'syntax' being enabled (like for indentation).
