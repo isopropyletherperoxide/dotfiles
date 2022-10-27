@@ -28,6 +28,7 @@ Plug 'nvim-telescope/telescope-media-files.nvim'
 Plug 'CRAG666/code_runner.nvim'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'tpope/vim-fugitive'
+Plug 'rktjmp/lush.nvim'
 call plug#end()
 set termguicolors
 colorscheme PaperColor 
