@@ -11,13 +11,22 @@
     }
   },
   "cSpell.userWords": [
+    "MOSFETs",
+    "NAND",
     "Neovim",
+    "crowbarring",
     "kanban",
-    "neofetch"
+    "neofetch",
+    "Більче",
+    "Волицьке",
+    "Дашава",
+    "Дашавському",
+    "Опарському",
+    "Угерське"
   ],
   "pyright.inlayHints.variableTypes": false,
   "pyright.inlayHints.functionReturnTypes": true,
-  "clangd.inlayHints.enable": false
+  "inlayHint.enable": false
 }
 
 

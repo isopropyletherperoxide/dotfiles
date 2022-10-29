@@ -29,12 +29,13 @@ Plug 'CRAG666/code_runner.nvim'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'tpope/vim-fugitive'
 Plug 'rktjmp/lush.nvim'
+Plug 'ActivityWatch/aw-watcher-vim'
 call plug#end()
 set termguicolors
 colorscheme PaperColor 
 hi vertsplit guifg=bg guibg=bg
 hi statusline guifg=#33393B 
-vmap <leader>a <Plug>(coc-codeaction-selected)
+vmap <leader>a <Plug>(coc-codeaction-selected)<CR>
 nmap <leader>a <Plug>(coc-codeaction-selected)
 nnoremap <leader>v <cmd>NERDTree<cr>
 :set fillchars+=eob:\ 
@@ -55,7 +56,6 @@ smap <expr> <Tab> snippy#can_jump(1) ? '<Plug>(snippy-next)' : '<Tab>'
 smap <expr> <S-Tab> snippy#can_jump(-1) ? '<Plug>(snippy-previous)' : '<S-Tab>'
 xmap <Tab> <Plug>(snippy-cut-text)
 set noshowmode
-
 
 let g:dashboard_preview_file = "~/.config/nvim/Logo"
 let g:dashboard_preview_command = 'cat'
