@@ -30,7 +30,5 @@
                 "Опарському",
                 "Угерське"
         ],
-        "pyright.inlayHints.variableTypes": false,
-        "pyright.inlayHints.functionReturnTypes": true,
-        "inlayHint.enable": false
+	"clangd.inlayHints.enable": false
 }
