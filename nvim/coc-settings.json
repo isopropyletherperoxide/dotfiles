@@ -17,18 +17,19 @@
                 }
         },
         "cSpell.userWords": [
-                "MOSFETs",
-                "NAND",
-                "Neovim",
-                "crowbarring",
-                "kanban",
-                "neofetch",
-                "Більче",
-                "Волицьке",
-                "Дашава",
-                "Дашавському",
-                "Опарському",
-                "Угерське"
+          "MOSFETs",
+          "NAND",
+          "Neovim",
+          "crowbarring",
+          "ghci",
+          "kanban",
+          "neofetch",
+          "Більче",
+          "Волицьке",
+          "Дашава",
+          "Дашавському",
+          "Опарському",
+          "Угерське"
         ],
 	"clangd.inlayHints.enable": false
 }
