@@ -30,12 +30,13 @@ Plug 'NLKNguyen/papercolor-theme'
 Plug 'tpope/vim-fugitive'
 Plug 'rktjmp/lush.nvim'
 Plug 'ActivityWatch/aw-watcher-vim'
+Plug 'michaelb/sniprun', {'do': 'bash install.sh'}
 call plug#end()
 set termguicolors
 colorscheme PaperColor 
 hi vertsplit guifg=bg guibg=bg
 hi statusline guifg=#33393B 
-vmap <leader>a <Plug>(coc-codeaction-selected)<CR>
+vmap <leader>a <Plug>(coc-codeaction-selected)
 nmap <leader>a <Plug>(coc-codeaction-selected)
 nnoremap <leader>v <cmd>NERDTree<cr>
 :set fillchars+=eob:\ 
@@ -72,7 +73,7 @@ let g:presence_debounce_timeout    = 10
 let g:presence_enable_line_number  = 0
 let g:presence_blacklist           = []
 let g:presence_buttons             = 1
-let g:coc_global_extensions = ['coc-json', 'coc-clangd', 'coc-spell-checker', 'coc-go']
+let g:coc_global_extensions = ['coc-json', 'coc-clangd', 'coc-spell-checker', 'coc-go', 'coc-snippets']
 
 let g:startify_lists = [
         \ { 'type': 'files',     'header': ['   MRU']            },
