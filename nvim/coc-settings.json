@@ -31,5 +31,5 @@
           "Опарському",
           "Угерське"
         ],
-	"clangd.inlayHints.enable": false
+	"inlayHint.enable": false
 }
