@@ -29,3 +29,6 @@
 
 (require 'evil)
 (evil-mode 1)
+(require 'elcord)
+(elcord-mode)
+(load-theme 'vscode-dark-plus t)

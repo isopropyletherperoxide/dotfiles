@@ -31,6 +31,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'rktjmp/lush.nvim'
 Plug 'ActivityWatch/aw-watcher-vim'
 Plug 'michaelb/sniprun', {'do': 'bash install.sh'}
+Plug 'raichoo/haskell-vim'
 call plug#end()
 set termguicolors
 colorscheme PaperColor 
@@ -43,6 +44,7 @@ nnoremap <leader>v <cmd>NERDTree<cr>
 :set number rnu
 :set cursorline
 :set mouse=n
+:set expandtab
 :nnoremap <F5> :Dashboard<Enter>
 
 
