@@ -32,6 +32,8 @@ Plug 'rktjmp/lush.nvim'
 Plug 'ActivityWatch/aw-watcher-vim'
 Plug 'michaelb/sniprun', {'do': 'bash install.sh'}
 Plug 'raichoo/haskell-vim'
+Plug 'tamton-aquib/zone.nvim'
+Plug 'ahmedkhalf/project.nvim'
 call plug#end()
 set termguicolors
 colorscheme PaperColor 

@@ -16,6 +16,12 @@ require'nvim-treesitter.configs'.setup {
     }
 }
 
+require("project_nvim").setup {
+    -- your configuration comes here
+    -- or leave it empty to use the default settings
+    -- refer to the configuration section below
+}
+
 
 require'telescope'.setup {
   extensions = {
@@ -24,12 +30,16 @@ require'telescope'.setup {
       -- defaults to {"png", "jpg", "mp4", "webm", "pdf"}
       filetypes = {"png", "webp", "jpg", "jpeg"},
       find_cmd = "rg" -- find command (defaults to `fd`)
-    }
+    } 
   },
 }
 require('code_runner').setup({
 filetype_path = vim.fn.expand('~/.config/nvim/filetypes.json'),
 })
+
+require("zone").setup()
+
+require('telescope').load_extension('projects')
 --[[ require("mason").setup()
 require("mason-lspconfig").setup()
 require("null-ls").setup({
