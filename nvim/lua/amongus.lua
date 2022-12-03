@@ -37,7 +37,7 @@ require('code_runner').setup({
 filetype_path = vim.fn.expand('~/.config/nvim/filetypes.json'),
 })
 
-require("zone").setup()
+-- require("zone").setup()
 
 require('telescope').load_extension('projects')
 --[[ require("mason").setup()
