@@ -1,5 +1,4 @@
 {
-        "suggest.echodocSupport":true,
         "cSpellExt.enableDictionaries": ["german", "ukrainian"],
         "cSpell.enabledLanguageIds": ["markdown"],
         "cSpell.language": "en,de,uk",
@@ -14,7 +13,9 @@
                         "command": "haskell-language-server-wrapper",
                         "args": ["--lsp"],
                         "rootPatterns": ["*.cabal", "stack.yaml", "cabal.project", "package.yaml", "hie.yaml"],
-                        "filetypes": ["haskell", "lhaskell"]
+                        "filetypes": ["haskell", "lhaskell"],
+                        "settings": {
+                        }
                 }
         },
         "cSpell.userWords": [
