@@ -33,6 +33,7 @@ Plug 'ActivityWatch/aw-watcher-vim'
 Plug 'michaelb/sniprun', {'do': 'bash install.sh'}
 Plug 'raichoo/haskell-vim'
 "" Plug 'tamton-aquib/zone.nvim'
+Plug 'Shougo/echodoc.vim'
 Plug 'ahmedkhalf/project.nvim'
 call plug#end()
 set termguicolors
@@ -47,19 +48,23 @@ nnoremap <leader>v <cmd>NERDTree<cr>
 :set cursorline
 :set mouse=n
 :set expandtab
+let g:echodoc#enable_at_startup = 1
+
 :nnoremap <F5> :Dashboard<Enter>
 
 
 command UpdateRPC lua package.loaded.presence:update()
 lua require('amongus')
 
+
+nnoremap <leader>b <C-r>=CocActionAsync('showSignatureHelp')<CR>
 inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-imap <expr> <C-Tab> snippy#can_expand_or_advance() ? '<Plug>(snippy-expand-or-advance)' : '<Tab>'
-imap <expr> <S-Tab> snippy#can_jump(-1) ? '<Plug>(snippy-previous)' : '<S-Tab>'
-smap <expr> <Tab> snippy#can_jump(1) ? '<Plug>(snippy-next)' : '<Tab>'
-smap <expr> <S-Tab> snippy#can_jump(-1) ? '<Plug>(snippy-previous)' : '<S-Tab>'
-xmap <Tab> <Plug>(snippy-cut-text)
+""imap <expr> <C-Tab> snippy#can_expand_or_advance() ? '<Plug>(snippy-expand-or-advance)' : '<Tab>'
+""imap <expr> <S-Tab> snippy#can_jump(-1) ? '<Plug>(snippy-previous)' : '<S-Tab>'
+""smap <expr> <Tab> snippy#can_jump(1) ? '<Plug>(snippy-next)' : '<Tab>'
+""smap <expr> <S-Tab> snippy#can_jump(-1) ? '<Plug>(snippy-previous)' : '<S-Tab>'
+""xmap <Tab> <Plug>(snippy-cut-text)
 set noshowmode
 
 let g:dashboard_preview_file = "~/.config/nvim/Logo"

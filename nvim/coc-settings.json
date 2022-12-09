@@ -1,4 +1,5 @@
 {
+        "suggest.echodocSupport":true,
         "cSpellExt.enableDictionaries": ["german", "ukrainian"],
         "cSpell.enabledLanguageIds": ["markdown"],
         "cSpell.language": "en,de,uk",
