@@ -92,7 +92,7 @@ let g:presence_debounce_timeout    = 10
 let g:presence_enable_line_number  = 0
 let g:presence_blacklist           = []
 let g:presence_buttons             = 1
-let g:coc_global_extensions = ['coc-json', 'coc-clangd', 'coc-spell-checker', 'coc-go', 'coc-snippets']
+let g:coc_global_extensions = ['coc-json', 'coc-clangd', 'coc-rust-analyzer', 'coc-spell-checker', 'coc-go', 'coc-snippets']
 
 let g:startify_lists = [
         \ { 'type': 'files',     'header': ['   MRU']            },
@@ -102,7 +102,7 @@ let g:startify_lists = [
         \ ]
 
 :let g:startify_bookmarks = systemlist("cut -sd' ' -f 2- ~/.NERDTreeBookmarks")
-
+:let NERDTreeChDirMode = 2 
 
 if exists("g:neovide") " neovide settings
 	set guifont=Hack:h4
