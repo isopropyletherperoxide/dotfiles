@@ -33,8 +33,10 @@ Plug 'ActivityWatch/aw-watcher-vim'
 Plug 'michaelb/sniprun', {'do': 'bash install.sh'}
 Plug 'raichoo/haskell-vim'
 "" Plug 'tamton-aquib/zone.nvim'
+Plug 'tpope/vim-surround'
 Plug 'Shougo/echodoc.vim'
 Plug 'ahmedkhalf/project.nvim'
+Plug 'Olical/conjure'
 call plug#end()
 set termguicolors
 colorscheme PaperColor 
@@ -48,6 +50,7 @@ nnoremap <leader>v <cmd>NERDTree<cr>
 :set cursorline
 :set mouse=n
 :set expandtab
+:set shortmess+=A
 let g:echodoc#enable_at_startup = 1
 
 :nnoremap <F5> :Dashboard<Enter>
