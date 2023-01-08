@@ -29,7 +29,7 @@ Plug 'CRAG666/code_runner.nvim'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'tpope/vim-fugitive'
 Plug 'rktjmp/lush.nvim'
-Plug 'ActivityWatch/aw-watcher-vim'
+"" Plug 'ActivityWatch/aw-watcher-vim'
 Plug 'michaelb/sniprun', {'do': 'bash install.sh'}
 Plug 'raichoo/haskell-vim'
 "" Plug 'tamton-aquib/zone.nvim'

@@ -24,11 +24,16 @@
   :ensure t
   :init (doom-modeline-mode 1))
 
-(use-package tree-sitter)
-(use-package tree-sitter-langs)
+(use-package dashboard
+  :ensure t
+  :config
+  (dashboard-setup-startup-hook))
 
-(require 'tree-sitter)
-(require 'tree-sitter-langs)
+
+(use-package tree-sitter)
+
+(use-package twittering-mode)
+(helm-mode)
 (use-package lsp-mode
   :commands (lsp lsp-deferred)
   :init
@@ -47,11 +52,29 @@
 (use-package dap-mode) 
 (use-package powerline)
 (use-package haskell-mode)
+(use-package markdown-mode)
 (use-package rust-mode)
 (use-package rustic)
 (use-package lsp-haskell)
 (use-package yasnippet) 
 (use-package projectile)
+
+(use-package obsidian
+  :ensure t
+  :demand t
+  :config
+  (obsidian-specify-path "~/Dropbox/uwu")
+  (global-obsidian-mode t)
+  :custom
+  ;; This directory will be used for `obsidian-capture' if set.
+  (obsidian-inbox-directory "Inbox")
+  :bind (:map obsidian-mode-map
+  ;; Replace C-c C-o with Obsidian.el's implementation. It's ok to use another key binding.
+  ("C-c C-o" . obsidian-follow-link-at-point)
+  ;; Jump to backlinks
+  ("C-c C-b" . obsidian-backlink-jump)
+  ;; If you prefer you can use `obsidian-insert-link'
+  ("C-c C-l" . obsidian-insert-wikilink)))
 
 (add-hook 'c-mode-hook #'lsp)
 (add-hook 'haskell-mode-hook #'lsp)
@@ -63,10 +86,10 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
-   '("2721b06afaf1769ef63f942bf3e977f208f517b187f2526f0e57c1bd4a000350" default))
+   '("ff24d14f5f7d355f47d53fd016565ed128bf3af30eb7ce8cae307ee4fe7f3fd0" "631c52620e2953e744f2b56d102eae503017047fb43d65ce028e88ef5846ea3b" "2078837f21ac3b0cc84167306fa1058e3199bbd12b6d5b56e3777a4125ff6851" "2721b06afaf1769ef63f942bf3e977f208f517b187f2526f0e57c1bd4a000350" default))
  '(inhibit-startup-screen t)
  '(package-selected-packages
-   '(treemacs-all-the-icons minions yasnippet which-key vscode-dark-plus-theme use-package tree-sitter-langs projectile lsp-ui helm-xref helm-lsp flycheck evil elcord doom-themes doom-modeline dap-mode company)))
+   '(obsidian treemacs-all-the-icons minions yasnippet which-key vscode-dark-plus-theme use-package tree-sitter-langs projectile lsp-ui helm-xref helm-lsp flycheck evil elcord doom-themes doom-modeline dap-mode company)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -77,3 +100,5 @@
 (load-theme 'doom-material)
 (tool-bar-mode -1)
 (scroll-bar-mode -1)
+(global-hl-line-mode)
+(global-linum-mode)
