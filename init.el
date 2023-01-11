@@ -29,25 +29,31 @@
   :config
   (dashboard-setup-startup-hook))
 
+(use-package magit)
 
+(use-package helm) 
 (use-package tree-sitter)
 
 (use-package twittering-mode)
 (helm-mode)
+
+(global-set-key (kbd "M-x") 'helm-M-x)
 (use-package lsp-mode
   :commands (lsp lsp-deferred)
   :init
   (setq lsp-keymap-prefix "C-c l")
   :config
   (setq lsp-headerline-breadcrumb-icons-enable nil)
-)
+  )
+
+
 (use-package lsp-ui)
 (use-package flycheck)
 (use-package company)
 (use-package lsp-treemacs)
 (use-package treemacs)
+(use-package treemacs-evil)
 (use-package treemacs-all-the-icons)
-(use-package helm) 
 (use-package helm-lsp) 
 (use-package dap-mode) 
 (use-package powerline)
@@ -67,7 +73,7 @@
   (global-obsidian-mode t)
   :custom
   ;; This directory will be used for `obsidian-capture' if set.
-  (obsidian-inbox-directory "Inbox")
+  (obsidian-inbox-directory "~/Dropbox/uwu")
   :bind (:map obsidian-mode-map
   ;; Replace C-c C-o with Obsidian.el's implementation. It's ok to use another key binding.
   ("C-c C-o" . obsidian-follow-link-at-point)
@@ -89,7 +95,7 @@
    '("ff24d14f5f7d355f47d53fd016565ed128bf3af30eb7ce8cae307ee4fe7f3fd0" "631c52620e2953e744f2b56d102eae503017047fb43d65ce028e88ef5846ea3b" "2078837f21ac3b0cc84167306fa1058e3199bbd12b6d5b56e3777a4125ff6851" "2721b06afaf1769ef63f942bf3e977f208f517b187f2526f0e57c1bd4a000350" default))
  '(inhibit-startup-screen t)
  '(package-selected-packages
-   '(obsidian treemacs-all-the-icons minions yasnippet which-key vscode-dark-plus-theme use-package tree-sitter-langs projectile lsp-ui helm-xref helm-lsp flycheck evil elcord doom-themes doom-modeline dap-mode company)))
+   '(magit obsidian treemacs-all-the-icons minions yasnippet which-key vscode-dark-plus-theme use-package tree-sitter-langs projectile lsp-ui helm-xref helm-lsp flycheck evil elcord doom-themes doom-modeline dap-mode company)))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -102,3 +108,5 @@
 (scroll-bar-mode -1)
 (global-hl-line-mode)
 (global-linum-mode)
+(treemacs-load-theme "all-the-icons")
+(global-company-mode)

@@ -52,6 +52,8 @@ nnoremap <leader>v <cmd>NERDTree<cr>
 :set expandtab
 :set shortmess+=A
 let g:echodoc#enable_at_startup = 1
+let g:conjure#client_on_load = v:false
+:let g:conjure#mapping#doc_word = v:false
 
 :nnoremap <F5> :Dashboard<Enter>
 
