@@ -17,6 +17,7 @@ Plug 'mhinz/vim-startify'
 Plug 'glepnir/dashboard-nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
+Plug 'nvim-telescope/telescope-dap.nvim'
 Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'ryanoasis/vim-devicons'
 Plug 'p00f/nvim-ts-rainbow'
@@ -37,15 +38,39 @@ Plug 'tpope/vim-surround'
 Plug 'Shougo/echodoc.vim'
 Plug 'ahmedkhalf/project.nvim'
 Plug 'Olical/conjure'
+Plug 'mfussenegger/nvim-dap'
+Plug 'rcarriga/nvim-dap-ui'
+Plug 'leoluz/nvim-dap-go'
+Plug 'lukas-reineke/indent-blankline.nvim'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+Plug 'tpope/vim-dispatch'
+Plug 'clojure-vim/vim-jack-in'
+Plug 'radenling/vim-dispatch-neovim'
+Plug 'guns/vim-sexp'
+Plug 'tpope/vim-repeat'
+Plug 'tpope/vim-sexp-mappings-for-regular-people'
 call plug#end()
 set termguicolors
 colorscheme PaperColor 
 hi vertsplit guifg=bg guibg=bg
-hi statusline guifg=#33393B 
+hi statusline guifg=#33393B
+
+nmap <silent> [g <Plug>(coc-diagnostic-prev)
+nmap <silent> ]g <Plug>(coc-diagnostic-next)
 vmap <leader>a <Plug>(coc-codeaction-selected)
 nmap <leader>a <Plug>(coc-codeaction-selected)
+nmap <leader>rn <Plug>(coc-rename)
+nmap <leader>rf <Plug>(coc-refactor)
+nmap <leader>gr <Plug>(coc-references)
+nmap <leader>gi <Plug>(coc-implementation)
+nmap <leader>gy <Plug>(coc-type-definition)
+
+noremap <expr> <Down> v:count ? 'j' : 'gj'
+noremap <expr> <Up> v:count ? 'k' : 'gk'
+
 nnoremap <leader>v <cmd>NERDTree<cr>
-:set fillchars+=eob:\ 
+set fillchars+=eob:\ 
 :set number rnu
 :set cursorline
 :set mouse=n
@@ -53,10 +78,11 @@ nnoremap <leader>v <cmd>NERDTree<cr>
 :set shortmess+=A
 let g:echodoc#enable_at_startup = 1
 let g:conjure#client_on_load = v:false
-:let g:conjure#mapping#doc_word = v:false
+let g:conjure#mapping#doc_word = v:false
+
+:set undofile
 
 :nnoremap <F5> :Dashboard<Enter>
-
 
 command UpdateRPC lua package.loaded.presence:update()
 lua require('amongus')
@@ -82,6 +108,9 @@ endfunction
 ""xmap <Tab> <Plug>(snippy-cut-text)
 set noshowmode
 
+
+let @1 = "0i€kb "
+let @2 = "ysiW`€krysiW`" 
 let g:dashboard_preview_file = "~/.config/nvim/Logo"
 let g:dashboard_preview_command = 'cat'
 let g:dashboard_default_executive = 'telescope'
