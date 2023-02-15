@@ -1,4 +1,5 @@
 call plug#begin('~/.vim/plugged')
+Plug 'isopropyletherperoxide/komeji-nvim'
 Plug 'vim-airline/vim-airline'
 Plug 'Mofiqul/vscode.nvim'
 Plug 'vim-airline/vim-airline-themes'
@@ -50,11 +51,13 @@ Plug 'radenling/vim-dispatch-neovim'
 Plug 'guns/vim-sexp'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-sexp-mappings-for-regular-people'
+Plug 'folke/twilight.nvim'
+Plug 'rktjmp/shipwright.nvim'
 call plug#end()
 set termguicolors
 colorscheme PaperColor 
 hi vertsplit guifg=bg guibg=bg
-hi statusline guifg=#33393B
+"" hi statusline guifg=#33393B
 
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
@@ -65,6 +68,7 @@ nmap <leader>rf <Plug>(coc-refactor)
 nmap <leader>gr <Plug>(coc-references)
 nmap <leader>gi <Plug>(coc-implementation)
 nmap <leader>gy <Plug>(coc-type-definition)
+nmap <silent> gd <Plug>(coc-definition)
 
 noremap <expr> <Down> v:count ? 'j' : 'gj'
 noremap <expr> <Up> v:count ? 'k' : 'gk'
@@ -109,8 +113,8 @@ endfunction
 set noshowmode
 
 
-let @1 = "0i€kb "
-let @2 = "ysiW`€krysiW`" 
+let @a = "0i€kb "
+let @w = "ysiW`€krysiW`" 
 let g:dashboard_preview_file = "~/.config/nvim/Logo"
 let g:dashboard_preview_command = 'cat'
 let g:dashboard_default_executive = 'telescope'

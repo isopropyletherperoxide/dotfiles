@@ -79,6 +79,9 @@
 (use-package yasnippet) 
 (use-package projectile)
 (use-package cider)
+(use-package which-key
+  :config
+  (which-key-mode))
 
 (use-package obsidian
   :ensure t
@@ -107,11 +110,12 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(custom-safe-themes
-   '("ff24d14f5f7d355f47d53fd016565ed128bf3af30eb7ce8cae307ee4fe7f3fd0" "631c52620e2953e744f2b56d102eae503017047fb43d65ce028e88ef5846ea3b" "2078837f21ac3b0cc84167306fa1058e3199bbd12b6d5b56e3777a4125ff6851" "2721b06afaf1769ef63f942bf3e977f208f517b187f2526f0e57c1bd4a000350" default))
+   '("8fd7f42246dd1b70924d13e7231ef5c860ae6a84ec90465a14573358a570bfca" "53055a6c9215d58699b5362898fae6b9fc30b30605d3edf0edd923ee016e9730" "ff24d14f5f7d355f47d53fd016565ed128bf3af30eb7ce8cae307ee4fe7f3fd0" "631c52620e2953e744f2b56d102eae503017047fb43d65ce028e88ef5846ea3b" "2078837f21ac3b0cc84167306fa1058e3199bbd12b6d5b56e3777a4125ff6851" "2721b06afaf1769ef63f942bf3e977f208f517b187f2526f0e57c1bd4a000350" default))
  '(helm-minibuffer-history-key "M-p")
  '(inhibit-startup-screen t)
  '(package-selected-packages
-   '(todoist emacs-todoist magit obsidian treemacs-all-the-icons minions yasnippet which-key vscode-dark-plus-theme use-package tree-sitter-langs projectile lsp-ui helm-xref helm-lsp flycheck evil elcord doom-themes doom-modeline dap-mode company)))
+   '(todoist emacs-todoist magit obsidian treemacs-all-the-icons minions yasnippet which-key vscode-dark-plus-theme use-package tree-sitter-langs projectile lsp-ui helm-xref helm-lsp flycheck evil elcord doom-themes doom-modeline dap-mode company))
+ '(warning-suppress-types '((comp) (comp))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
