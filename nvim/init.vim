@@ -57,7 +57,7 @@ call plug#end()
 set termguicolors
 colorscheme PaperColor 
 hi vertsplit guifg=bg guibg=bg
-"" hi statusline guifg=#33393B
+hi statusline guifg=#33393B
 
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
