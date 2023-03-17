@@ -61,14 +61,17 @@ hi statusline guifg=#33393B
 
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
-vmap <leader>a <Plug>(coc-codeaction-selected)
-nmap <leader>a <Plug>(coc-codeaction-selected)
-nmap <leader>rn <Plug>(coc-rename)
-nmap <leader>rf <Plug>(coc-refactor)
-nmap <leader>gr <Plug>(coc-references)
-nmap <leader>gi <Plug>(coc-implementation)
-nmap <leader>gy <Plug>(coc-type-definition)
-nmap <silent> gd <Plug>(coc-definition)
+map <leader>a <Plug>(coc-codeaction-selected)
+map <leader>rn <Plug>(coc-rename)
+map <leader>rf <Plug>(coc-refactor)
+map <leader>gr <Plug>(coc-references)
+map <leader>gi <Plug>(coc-implementation)
+map <leader>gy <Plug>(coc-type-definition)
+map <silent> gd <Plug>(coc-definition)
+map <Leader>ca <Plug>(coc-codeaction-line)
+map <Leader>ac <Plug>(coc-codeaction-cursor)
+map <Leader>ao <Plug>(coc-codelens-action)
+
 
 noremap <expr> <Down> v:count ? 'j' : 'gj'
 noremap <expr> <Up> v:count ? 'k' : 'gk'

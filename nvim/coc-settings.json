@@ -1,5 +1,13 @@
 {
         "signature.enable": true,
+        "codeLens.enable": true,
+        "coc.preferences.enableMarkdown": true,
+        "diagnostic": {
+                "virtualText": false,
+                "virtualTextCurrentLineOnly": false,
+                "virtualTextLines": 1,
+                "virtualTextPrefix": " > "
+        },
         "suggest.autoTrigger": "always",
         "cSpellExt.enableDictionaries": ["german", "ukrainian"],
         "cSpell.enabledLanguageIds": ["markdown"],
@@ -16,8 +24,7 @@
                         "args": ["--lsp"],
                         "rootPatterns": ["*.cabal", "stack.yaml", "cabal.project", "package.yaml", "hie.yaml"],
                         "filetypes": ["haskell", "lhaskell"],
-                        "settings": {
-                        }
+                        "settings": {}
                 }
         },
         "cSpell.userWords": [
@@ -28,6 +35,7 @@
           "ghci",
           "kanban",
           "neofetch",
+          "struct",
           "Більче",
           "Волицьке",
           "Дашава",
@@ -35,5 +43,5 @@
           "Опарському",
           "Угерське"
         ],
-	"inlayHint.enable": false
+        "inlayHint.enable": false
 }
