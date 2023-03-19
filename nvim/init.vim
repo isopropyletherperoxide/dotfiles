@@ -53,6 +53,7 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-sexp-mappings-for-regular-people'
 Plug 'folke/twilight.nvim'
 Plug 'rktjmp/shipwright.nvim'
+Plug 'lewis6991/gitsigns.nvim'
 call plug#end()
 set termguicolors
 colorscheme PaperColor 

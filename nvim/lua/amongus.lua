@@ -29,6 +29,7 @@ dap.adapters.lldb = {
   name = 'lldb'
 }
 
+require('gitsigns').setup()
 
 require('dap-go').setup {
   -- Additional dap configurations can be added.
