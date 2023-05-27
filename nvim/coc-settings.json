@@ -1,6 +1,6 @@
 {
         "signature.enable": true,
-        "codeLens.enable": true,
+        "codeLens.enable": false,
         "coc.preferences.enableMarkdown": true,
         "diagnostic": {
                 "virtualText": false,
@@ -25,23 +25,25 @@
                         "rootPatterns": ["*.cabal", "stack.yaml", "cabal.project", "package.yaml", "hie.yaml"],
                         "filetypes": ["haskell", "lhaskell"],
                         "settings": {}
+
                 }
         },
         "cSpell.userWords": [
-          "MOSFETs",
-          "NAND",
-          "Neovim",
-          "crowbarring",
-          "ghci",
-          "kanban",
-          "neofetch",
-          "struct",
-          "Більче",
-          "Волицьке",
-          "Дашава",
-          "Дашавському",
-          "Опарському",
-          "Угерське"
+                "MOSFETs",
+                "NAND",
+                "Neovim",
+                "crowbarring",
+                "ghci",
+                "kanban",
+                "neofetch",
+                "struct",
+                "Більче",
+                "Волицьке",
+                "Дашава",
+                "Дашавському",
+                "Опарському",
+                "Угерське"
         ],
-        "inlayHint.enable": false
+        "inlayHint.enable": false,
+        "snippets.ultisnips.pythonPrompt": false
 }

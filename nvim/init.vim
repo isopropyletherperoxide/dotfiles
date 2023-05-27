@@ -1,12 +1,11 @@
 call plug#begin('~/.vim/plugged')
-Plug 'isopropyletherperoxide/komeji-nvim'
+Plug 'isopropyletherperoxide/komeiji-vim'
 Plug 'vim-airline/vim-airline'
 Plug 'Mofiqul/vscode.nvim'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'preservim/nerdtree'
 Plug 'jbyuki/nabla.nvim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
-Plug 'andweeb/presence.nvim'
 Plug 'gentoo/gentoo-syntax'
 Plug 'alec-gibson/nvim-tetris'
 Plug 'ThePrimeagen/vim-be-good'
@@ -31,10 +30,11 @@ Plug 'CRAG666/code_runner.nvim'
 Plug 'NLKNguyen/papercolor-theme'
 Plug 'tpope/vim-fugitive'
 Plug 'rktjmp/lush.nvim'
-"" Plug 'ActivityWatch/aw-watcher-vim'
+Plug 'andweeb/presence.nvim'
+Plug 'ActivityWatch/aw-watcher-vim'
 Plug 'michaelb/sniprun', {'do': 'bash install.sh'}
 Plug 'raichoo/haskell-vim'
-"" Plug 'tamton-aquib/zone.nvim'
+Plug 'tamton-aquib/zone.nvim'
 Plug 'tpope/vim-surround'
 Plug 'Shougo/echodoc.vim'
 Plug 'ahmedkhalf/project.nvim'
@@ -54,6 +54,7 @@ Plug 'tpope/vim-sexp-mappings-for-regular-people'
 Plug 'folke/twilight.nvim'
 Plug 'rktjmp/shipwright.nvim'
 Plug 'lewis6991/gitsigns.nvim'
+Plug 'projekt0n/github-nvim-theme'
 call plug#end()
 set termguicolors
 colorscheme PaperColor 
@@ -126,14 +127,9 @@ let g:dashboard_preview_pipeline = 'lolcat'
 let g:dashboard_preview_file_height = 14
 let g:dashboard_preview_file_width = 32
 let g:dashboard_preview_file_length = 20
-let g:presence_auto_update         = 1
-let g:presence_neovim_image_text   = "The One True Text Editor"
-let g:presence_main_image          = "neovim"
-let g:presence_client_id           = "793271441293967371"
-let g:presence_debounce_timeout    = 10
-let g:presence_enable_line_number  = 0
-let g:presence_blacklist           = []
-let g:presence_buttons             = 1
+let g:coc_filetype_map = {
+  \ 'arduino': 'cpp',
+  \ }
 let g:coc_global_extensions = ['coc-json', 'coc-clangd', 'coc-rust-analyzer', 'coc-spell-checker', 'coc-go', 'coc-snippets']
 
 let g:startify_lists = [
@@ -142,6 +138,7 @@ let g:startify_lists = [
         \ { 'type': 'bookmarks', 'header': ['   Bookmarks']      },
         \ { 'type': 'commands',  'header': ['   Commands']       },
         \ ]
+
 
 :let g:startify_bookmarks = systemlist("cut -sd' ' -f 2- ~/.NERDTreeBookmarks")
 :let NERDTreeChDirMode = 2 
