@@ -55,6 +55,7 @@ Plug 'folke/twilight.nvim'
 Plug 'rktjmp/shipwright.nvim'
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'projekt0n/github-nvim-theme'
+Plug 'folke/which-key.nvim'
 call plug#end()
 set termguicolors
 colorscheme PaperColor 
@@ -80,16 +81,17 @@ noremap <expr> <Up> v:count ? 'k' : 'gk'
 
 nnoremap <leader>v <cmd>NERDTree<cr>
 set fillchars+=eob:\ 
-:set number rnu
-:set cursorline
-:set mouse=n
-:set expandtab
-:set shortmess+=A
+set number rnu
+set cursorline
+set mouse=n
+set expandtab
+set shortmess+=A
 let g:echodoc#enable_at_startup = 1
 let g:conjure#client_on_load = v:false
 let g:conjure#mapping#doc_word = v:false
 
-:set undofile
+set undofile
+set nocompatible
 
 :nnoremap <F5> :Dashboard<Enter>
 
