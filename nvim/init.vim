@@ -56,12 +56,19 @@ Plug 'rktjmp/shipwright.nvim'
 Plug 'lewis6991/gitsigns.nvim'
 Plug 'projekt0n/github-nvim-theme'
 Plug 'folke/which-key.nvim'
+Plug 'lervag/vimtex'
+Plug 'tzachar/highlight-undo.nvim'
 call plug#end()
+
+" === Colours ===
+
 set termguicolors
 colorscheme PaperColor 
 hi vertsplit guifg=bg guibg=bg
 hi statusline guifg=#33393B
 
+
+" === coc Keybinds === 
 nmap <silent> [g <Plug>(coc-diagnostic-prev)
 nmap <silent> ]g <Plug>(coc-diagnostic-next)
 map <leader>a <Plug>(coc-codeaction-selected)
@@ -75,17 +82,41 @@ map <Leader>ca <Plug>(coc-codeaction-line)
 map <Leader>ac <Plug>(coc-codeaction-cursor)
 map <Leader>ao <Plug>(coc-codelens-action)
 
+" === Extra things for Coc ===
+inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
+                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
+nnoremap <silent> K :call ShowDocumentation()<CR>
+
+function! ShowDocumentation()
+  if CocAction('hasProvider', 'hover')
+    call CocActionAsync('doHover')
+  else
+    call feedkeys('K', 'in')
+  endif
+endfunction
+
+let g:coc_filetype_map = {
+  \ 'arduino': 'cpp',
+  \ }
+let g:coc_global_extensions = ['coc-json', 'coc-clangd', 'coc-rust-analyzer', 'coc-spell-checker', 'coc-go', 'coc-snippets']
+
+" === Navigation Remaps ===
 noremap <expr> <Down> v:count ? 'j' : 'gj'
 noremap <expr> <Up> v:count ? 'k' : 'gk'
 
 nnoremap <leader>v <cmd>NERDTree<cr>
+
+let @a = "0i€kb "
+let @w = "ysiW`€krysiW`" 
+
 set fillchars+=eob:\ 
 set number rnu
 set cursorline
 set mouse=n
 set expandtab
 set shortmess+=A
+set noshowmode
 let g:echodoc#enable_at_startup = 1
 let g:conjure#client_on_load = v:false
 let g:conjure#mapping#doc_word = v:false
@@ -99,29 +130,14 @@ command UpdateRPC lua package.loaded.presence:update()
 lua require('amongus')
 
 
-inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
-                              \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
-
-nnoremap <silent> K :call ShowDocumentation()<CR>
-
-
-function! ShowDocumentation()
-  if CocAction('hasProvider', 'hover')
-    call CocActionAsync('doHover')
-  else
-    call feedkeys('K', 'in')
-  endif
-endfunction
 ""imap <expr> <C-Tab> snippy#can_expand_or_advance() ? '<Plug>(snippy-expand-or-advance)' : '<Tab>'
 ""imap <expr> <S-Tab> snippy#can_jump(-1) ? '<Plug>(snippy-previous)' : '<S-Tab>'
 ""smap <expr> <Tab> snippy#can_jump(1) ? '<Plug>(snippy-next)' : '<Tab>'
 ""smap <expr> <S-Tab> snippy#can_jump(-1) ? '<Plug>(snippy-previous)' : '<S-Tab>'
 ""xmap <Tab> <Plug>(snippy-cut-text)
-set noshowmode
 
+" === Dashboard Settings ===
 
-let @a = "0i€kb "
-let @w = "ysiW`€krysiW`" 
 let g:dashboard_preview_file = "~/.config/nvim/Logo"
 let g:dashboard_preview_command = 'cat'
 let g:dashboard_default_executive = 'telescope'
@@ -129,10 +145,6 @@ let g:dashboard_preview_pipeline = 'lolcat'
 let g:dashboard_preview_file_height = 14
 let g:dashboard_preview_file_width = 32
 let g:dashboard_preview_file_length = 20
-let g:coc_filetype_map = {
-  \ 'arduino': 'cpp',
-  \ }
-let g:coc_global_extensions = ['coc-json', 'coc-clangd', 'coc-rust-analyzer', 'coc-spell-checker', 'coc-go', 'coc-snippets']
 
 let g:startify_lists = [
         \ { 'type': 'files',     'header': ['   MRU']            },
