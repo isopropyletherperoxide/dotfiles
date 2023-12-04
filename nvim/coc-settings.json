@@ -9,9 +9,6 @@
                 "virtualTextPrefix": " > "
         },
         "suggest.autoTrigger": "always",
-        "cSpellExt.enableDictionaries": ["german", "ukrainian"],
-        "cSpell.enabledLanguageIds": ["markdown"],
-        "cSpell.language": "en,de,uk",
         "languageserver": {
                 "bash": {
                         "command": "bash-language-server",
@@ -28,22 +25,6 @@
 
                 }
         },
-        "cSpell.userWords": [
-                "MOSFETs",
-                "NAND",
-                "Neovim",
-                "crowbarring",
-                "ghci",
-                "kanban",
-                "neofetch",
-                "struct",
-                "Більче",
-                "Волицьке",
-                "Дашава",
-                "Дашавському",
-                "Опарському",
-                "Угерське"
-        ],
         "inlayHint.enable": false,
         "snippets.ultisnips.pythonPrompt": false
 }

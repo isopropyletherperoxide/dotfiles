@@ -20,7 +20,6 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-dap.nvim'
 Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'ryanoasis/vim-devicons'
-Plug 'p00f/nvim-ts-rainbow'
 Plug 'sbdchd/neoformat'
 Plug 'wfxr/minimap.vim'
 Plug 'nvim-lua/popup.nvim'
@@ -58,6 +57,7 @@ Plug 'projekt0n/github-nvim-theme'
 Plug 'folke/which-key.nvim'
 Plug 'lervag/vimtex'
 Plug 'tzachar/highlight-undo.nvim'
+Plug 'HiPhish/rainbow-delimiters.nvim'
 call plug#end()
 
 " === Colours ===
@@ -66,6 +66,26 @@ set termguicolors
 colorscheme PaperColor 
 hi vertsplit guifg=bg guibg=bg
 hi statusline guifg=#33393B
+
+let g:rainbow_delimiters = {
+    \ 'strategy': {
+        \ '': rainbow_delimiters#strategy.global,
+        \ 'vim': rainbow_delimiters#strategy.local,
+    \ },
+    \ 'query': {
+        \ '': 'rainbow-delimiters',
+        \ 'lua': 'rainbow-blocks',
+    \ },
+    \ 'highlight': [
+        \ 'RainbowDelimiterRed',
+        \ 'RainbowDelimiterYellow',
+        \ 'RainbowDelimiterBlue',
+        \ 'RainbowDelimiterOrange',
+        \ 'RainbowDelimiterGreen',
+        \ 'RainbowDelimiterViolet',
+        \ 'RainbowDelimiterCyan',
+    \ ],
+\ }
 
 
 " === coc Keybinds === 
@@ -87,7 +107,6 @@ inoremap <silent><expr> <CR> coc#pum#visible() ? coc#pum#confirm()
                               \: "\<C-g>u\<CR>\<c-r>=coc#on_enter()\<CR>"
 
 nnoremap <silent> K :call ShowDocumentation()<CR>
-
 function! ShowDocumentation()
   if CocAction('hasProvider', 'hover')
     call CocActionAsync('doHover')
@@ -99,7 +118,7 @@ endfunction
 let g:coc_filetype_map = {
   \ 'arduino': 'cpp',
   \ }
-let g:coc_global_extensions = ['coc-json', 'coc-clangd', 'coc-rust-analyzer', 'coc-spell-checker', 'coc-go', 'coc-snippets']
+let g:coc_global_extensions = ['coc-json', 'coc-clangd', 'coc-rust-analyzer', 'coc-go', 'coc-snippets']
 
 " === Navigation Remaps ===
 noremap <expr> <Down> v:count ? 'j' : 'gj'
