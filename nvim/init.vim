@@ -179,3 +179,7 @@ let g:startify_lists = [
 if exists("g:neovide") " neovide settings
 	set guifont=Hack:h4
 endif
+
+let g:neoformat_haskell_ormolu = { 'exe': 'ormolu', 'args': [] }
+let g:neoformat_enabled_haskell = ['ormolu']
+
