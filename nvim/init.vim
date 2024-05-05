@@ -58,6 +58,7 @@ Plug 'folke/which-key.nvim'
 Plug 'lervag/vimtex'
 Plug 'tzachar/highlight-undo.nvim'
 Plug 'HiPhish/rainbow-delimiters.nvim'
+Plug 'm4xshen/hardtime.nvim'
 call plug#end()
 
 " === Colours ===
@@ -176,9 +177,6 @@ let g:startify_lists = [
 :let g:startify_bookmarks = systemlist("cut -sd' ' -f 2- ~/.NERDTreeBookmarks")
 :let NERDTreeChDirMode = 2 
 
-if exists("g:neovide") " neovide settings
-	set guifont=Hack:h4
-endif
 
 let g:neoformat_haskell_ormolu = { 'exe': 'ormolu', 'args': [] }
 let g:neoformat_enabled_haskell = ['ormolu']
