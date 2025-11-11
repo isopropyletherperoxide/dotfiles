@@ -29,9 +29,16 @@ dap.adapters.lldb = {
   name = 'lldb'
 }
 
-require("hardtime").setup()
+-- require("hardtime").setup()
 
 require('gitsigns').setup()
+
+require("pets").setup({
+  -- your options here
+})
+
+require('telescope').setup {
+}
 
 require('dap-go').setup {
   -- Additional dap configurations can be added.

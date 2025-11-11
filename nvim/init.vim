@@ -30,7 +30,6 @@ Plug 'NLKNguyen/papercolor-theme'
 Plug 'tpope/vim-fugitive'
 Plug 'rktjmp/lush.nvim'
 Plug 'andweeb/presence.nvim'
-Plug 'ActivityWatch/aw-watcher-vim'
 Plug 'michaelb/sniprun', {'do': 'bash install.sh'}
 Plug 'raichoo/haskell-vim'
 Plug 'tamton-aquib/zone.nvim'
@@ -40,6 +39,7 @@ Plug 'ahmedkhalf/project.nvim'
 Plug 'Olical/conjure'
 Plug 'mfussenegger/nvim-dap'
 Plug 'rcarriga/nvim-dap-ui'
+Plug 'nvim-neotest/nvim-nio'
 Plug 'leoluz/nvim-dap-go'
 Plug 'lukas-reineke/indent-blankline.nvim'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
@@ -58,7 +58,11 @@ Plug 'folke/which-key.nvim'
 Plug 'lervag/vimtex'
 Plug 'tzachar/highlight-undo.nvim'
 Plug 'HiPhish/rainbow-delimiters.nvim'
-Plug 'm4xshen/hardtime.nvim'
+Plug 'rafi/telescope-thesaurus.nvim'
+Plug 'giusgad/pets.nvim'
+Plug 'giusgad/hologram.nvim'
+Plug 'MunifTanjim/nui.nvim'
+
 call plug#end()
 
 " === Colours ===
