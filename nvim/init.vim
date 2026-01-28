@@ -20,6 +20,7 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-dap.nvim'
 Plug 'nvim-treesitter/nvim-treesitter'
 Plug 'ryanoasis/vim-devicons'
+Plug 'nvim-neotest/nvim-nio'
 Plug 'sbdchd/neoformat'
 Plug 'wfxr/minimap.vim'
 Plug 'nvim-lua/popup.nvim'
@@ -58,7 +59,6 @@ Plug 'folke/which-key.nvim'
 Plug 'lervag/vimtex'
 Plug 'tzachar/highlight-undo.nvim'
 Plug 'HiPhish/rainbow-delimiters.nvim'
-Plug 'm4xshen/hardtime.nvim'
 call plug#end()
 
 " === Colours ===

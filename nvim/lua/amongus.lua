@@ -29,7 +29,6 @@ dap.adapters.lldb = {
   name = 'lldb'
 }
 
-require("hardtime").setup()
 
 require('gitsigns').setup()
 
